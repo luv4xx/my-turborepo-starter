@@ -2,19 +2,22 @@
   "name": "@d2c/loader-figma",
   "private": true,
   "version": "0.0.0",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "./dist/d2c-loader-figma.umd.js",
   "module": "./dist/d2c-loader-figma.es.js",
   "scripts": {
     "dev": "vite",
     "build": "tsc -p tsconfig.json && vite build",
     "preview": "vite preview",
-    "lint": "eslint src --fix"
+    "lint": "eslint src --fix",
+    "test": "echo 'lib test'"
   },
   "devDependencies": {
     "typescript": "^4.5.4",
     "vite": "^2.8.0",
-    "tsconfig":"workspace:*"
+    "tsconfig": "workspace:*"
   },
   "exports": {
     ".": {
