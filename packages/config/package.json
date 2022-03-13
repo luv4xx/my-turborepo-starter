@@ -1,0 +1,15 @@
+{
+  "name": "config",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "files": [
+    "eslint-preset-lib.js",
+    "jest-preset-base.js",
+    "jest-lib.js"
+  ],
+  "dependencies": {},
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
+}

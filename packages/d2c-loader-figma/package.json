@@ -17,7 +17,8 @@
   "devDependencies": {
     "typescript": "^4.5.4",
     "vite": "^2.8.0",
-    "tsconfig": "workspace:*"
+    "tsconfig": "workspace:*",
+    "config": "workspace:*"
   },
   "exports": {
     ".": {
