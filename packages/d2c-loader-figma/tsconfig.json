@@ -2,8 +2,7 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "tsconfig/ts-lib.json",
   "compilerOptions": {
-    "baseUrl":".",
-    "declarationDir": "./dts"
+    "baseUrl": "."
   },
   "include": ["src"],
   "exclude": ["dist", "build", "node_modules"]
