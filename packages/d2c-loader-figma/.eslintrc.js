@@ -1,9 +1,15 @@
+const baseConfig = require("config/eslint-preset-lib.js");
+
 module.exports = {
-  ...require("config/eslint-preset-lib.js"),
-  parserOptions: {
-    tsconfigRootDir: __dirname,
-    project: ["./tsconfig.json"],
-    ecmaVersion: 2020,
-    sourceType: "module",
-  },
+  ...baseConfig,
+  overrides: [
+    ...baseConfig.overrides,
+    {
+      ...baseConfig.overrides[0],
+      parserOptions: {
+        tsconfigRootDir: __dirname,
+        project: ["./tsconfig.json"],
+      },
+    },
+  ],
 };

@@ -25,6 +25,7 @@ module.exports = {
     "prettier/prettier": "error",
     "import/no-extraneous-dependencies": "error",
     "node/no-unsupported-features/es-syntax": "off",
+    "@typescript-eslint/no-var-requires": "off",
   },
   settings: {
     "import/resolver": {
@@ -48,6 +49,7 @@ module.exports = {
         "@typescript-eslint/no-unused-vars": "error",
         "no-dupe-class-members": "off",
         "@typescript-eslint/no-dupe-class-members": "error",
+        "@typescript-eslint/no-var-requires": "off",
         "no-undef": "off",
         "no-redeclare": "off",
       },
@@ -57,6 +59,7 @@ module.exports = {
       rules: {
         "guard-for-in": "error",
         "import/extensions": ["error", { json: "always", cjs: "always" }],
+        "@typescript-eslint/no-var-requires": "off",
       },
       globals: { PACKAGE_JSON: "readonly" },
     },
@@ -76,6 +79,7 @@ module.exports = {
         "import/no-extraneous-dependencies": "off",
         // "no-restricted-imports": ["error", { patterns: ["**/src/**"] }],
         "no-restricted-imports": ["off"],
+        "@typescript-eslint/no-var-requires": "off",
       },
     },
   ],
