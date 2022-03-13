@@ -8,7 +8,7 @@ module.exports = {
       ...baseConfig.overrides[0],
       parserOptions: {
         tsconfigRootDir: __dirname,
-        project: ["./tsconfig.json"],
+        project: ["./tsconfig.lint.json"],
       },
     },
   ],

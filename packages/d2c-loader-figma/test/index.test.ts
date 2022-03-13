@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-restricted-imports
 import hw from "../src/index.ts";
 
 describe("test", () => {

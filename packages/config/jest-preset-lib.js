@@ -3,10 +3,10 @@ module.exports = {
   testEnvironment: "node",
   setupFilesAfterEnv: [],
   transform: {
-    "^.+.[t|j]sx?$": "esbuild-jest",
+    "^.+.[t|j]s$": "esbuild-jest",
   },
   transformIgnorePatterns: ["/node_modules/"],
-  collectCoverageFrom: ["**/src/**/*.{js,ts}"],
+  collectCoverageFrom: ["src/**/*.{js,ts}"],
   coveragePathIgnorePatterns: ["/node_modules/"],
   moduleFileExtensions: ["js", "ts", "json"],
 };

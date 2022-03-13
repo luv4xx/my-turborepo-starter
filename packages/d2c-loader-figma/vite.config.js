@@ -5,7 +5,7 @@ module.exports = defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, "src/index.ts"),
-      formats: ["es"],
+      // formats: ["es"],
       name: "@d2c/loader-figma",
       fileName: format => `d2c-loader-figma.${format}.js`,
     },
