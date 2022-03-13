@@ -12,7 +12,7 @@
     "build": "tsc -p tsconfig.json && vite build",
     "preview": "vite preview",
     "lint": "eslint src --fix",
-    "test": "echo 'lib test'"
+    "test": "jest --coverage"
   },
   "devDependencies": {
     "typescript": "^4.5.4",

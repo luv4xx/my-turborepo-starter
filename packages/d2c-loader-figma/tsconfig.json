@@ -5,5 +5,5 @@
     "baseUrl": "."
   },
   "include": ["src"],
-  "exclude": ["dist", "build", "node_modules"]
+  "exclude": ["dist", "node_modules"]
 }

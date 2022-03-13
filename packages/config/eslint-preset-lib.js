@@ -6,21 +6,18 @@ module.exports = {
   env: {
     node: true,
   },
-  // parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: "module",
     // project: ['./tsconfig.json'],
     // tsconfigRootDir: __dirname,
   },
-  plugins: ["import", "@typescript-eslint", "node", "jest", "prettier"],
+  plugins: ["import", "node", "jest", "prettier"],
   extends: [
     "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
     "plugin:node/recommended",
     "plugin:import/errors",
     "plugin:import/warnings",
-    "plugin:import/typescript",
     "plugin:prettier/recommended",
   ],
   rules: {
@@ -29,12 +26,20 @@ module.exports = {
     "import/no-extraneous-dependencies": "error",
     "node/no-unsupported-features/es-syntax": "off",
   },
-  settings: {},
+  settings: {
+    "import/resolver": {
+      node: {
+        extensions: [".js", ".ts"],
+        moduleDirectory: ["node_modules", "./src"],
+      },
+    },
+  },
   overrides: [
     {
       files: ["*.ts"],
       parser: "@typescript-eslint/parser",
       plugins: ["@typescript-eslint"],
+      extends: ["plugin:import/typescript"],
       parserOptions: {
         project: ["./tsconfig.json"],
       },
@@ -69,9 +74,10 @@ module.exports = {
         "jest/valid-describe": "off",
         "import/extensions": ["error", "always"],
         "import/no-extraneous-dependencies": "off",
-        "no-restricted-imports": ["error", { patterns: ["**/src/**"] }],
+        // "no-restricted-imports": ["error", { patterns: ["**/src/**"] }],
+        "no-restricted-imports": ["off"],
       },
     },
   ],
-  ignorePatterns: ["node_modules", ".turbo", "dist", "config"],
+  ignorePatterns: ["node_modules", ".turbo", "dist", "converage"],
 };

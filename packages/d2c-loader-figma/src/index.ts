@@ -2,7 +2,7 @@
 
 function test() {
   // console.log("yes");
-  return "sadasdfdHaaELsdLO WORLDasds!~!";
+  return "hello world";
 }
 
 export default test;
