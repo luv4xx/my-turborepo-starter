@@ -2,6 +2,7 @@
   "name": "d2c",
   "version": "0.0.0",
   "private": true,
+  "type": "commonjs",
   "workspaces": [
     "apps/*",
     "packages/*"
@@ -13,9 +14,17 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "eslint":  "^8.9.0",
+    "@typescript-eslint/eslint-plugin": "^5.14.0",
+    "@typescript-eslint/parser": "^5.14.0",
+    "eslint": "^8.11.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-node": "^0.3.6",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jest": "^26.1.1",
+    "eslint-plugin-node": "^11.1.0",
     "prettier": "^2.5.1",
-    "turbo": "latest"
+    "turbo": "latest",
+    "typescript": "^4.5.4"
   },
   "engines": {
     "npm": ">=7.0.0",

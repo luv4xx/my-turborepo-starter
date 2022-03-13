@@ -6,7 +6,7 @@ module.exports = defineConfig({
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
       name: '@d2c/loader-figma',
-      fileName: (format) => `${format}.js`
+      fileName: (format) => `d2c-loader-figma.${format}.js`
     },
     rollupOptions: {
       // 确保外部化处理那些你不想打包进库的依赖
