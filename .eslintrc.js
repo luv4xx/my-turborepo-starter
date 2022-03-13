@@ -10,21 +10,14 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: "module",
-    project: ['./tsconfig.json']
+    // project: ['./tsconfig.json'],
+    // tsconfigRootDir: __dirname,
   },
-  plugins: [
-    "import",
-    "@typescript-eslint",
-    "node",
-    "jest",
-    "prettier",
-  ],
+  plugins: ["import", "@typescript-eslint", "node", "jest", "prettier"],
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:node/recommended",
-    "airbnb-base",
-    "airbnb-typescript/base",
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:import/typescript",
@@ -34,14 +27,17 @@ module.exports = {
     "no-console": 2,
     "prettier/prettier": "error",
     "import/no-extraneous-dependencies": "error",
-    "node/no-unsupported-features/es-syntax": "off"
+    "node/no-unsupported-features/es-syntax": "off",
   },
   settings: {},
   overrides: [
     {
-      files: ["**/*.ts"],
+      files: ["*.ts"],
       parser: "@typescript-eslint/parser",
       plugins: ["@typescript-eslint"],
+      parserOptions: {
+        project: ["./tsconfig.json"],
+      },
       rules: {
         "no-unused-vars": "off",
         "@typescript-eslint/no-unused-vars": "error",
